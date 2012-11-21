@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+current_path="${PWD}"
+
+echo "Installing on-my-zhs"
+if [[ -e $HOME/.oh-my-zsh ]]; then
+    echo "Oh-my zsh already exists" 
+else
+    git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"     
+fi
+
+chsh -s `which zsh`
+
+rm  $HOME/.zshrc
+ln -s $current_path/zshrc $HOME/.zshrc
+
+rm $HOME/.gemrc
+ln -s $current_path/gemrc $HOME/.gemrc
+
+rm $HOME/.tmux.conf
+ln -s $current_path/tmux.conf $HOME/.tmux.conf
+
+echo 'You can install VIM settings from https://github.com/huobazi/vimrc'
+
