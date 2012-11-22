@@ -20,11 +20,14 @@ export TERM="xterm-256color"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler brew gem rails ruby)
+plugins=(git bundler gem rails3 ruby rvm rake svn github)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+# http://episko.posterous.com/brew-zsh-git-and-rvm
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 alias tumx='tmux -2'
+
+PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
