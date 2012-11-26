@@ -20,5 +20,8 @@ ln -s $current_path/gemrc $HOME/.gemrc
 rm $HOME/.tmux.conf
 ln -s $current_path/tmux.conf $HOME/.tmux.conf
 
+rm $HOME/.gitconfig
+ln -s $current_path/gitconfig $HOME/.gitconfig
+
 echo 'You can install VIM settings from https://github.com/huobazi/vimrc'
 
