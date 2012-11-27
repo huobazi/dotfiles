@@ -30,4 +30,4 @@ source $ZSH/oh-my-zsh.sh
 
 alias tumx='tmux -2'
 
-PATH=$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/local/bin:$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
