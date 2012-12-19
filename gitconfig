@@ -16,7 +16,7 @@
     status = auto
     branch = auto
     interactive = auto
-    ui = auto
+    ui = true 
 
 [color "branch"]
     current = yellow reverse
@@ -31,9 +31,12 @@
     new = green bold
     commit = yellow bold
     func = green dim
-#plain = white bold
+    #plain = white bold
 
 [color "status"]
     added = yellow
     changed = green
     untracked = cyan
+
+[push]
+    default = current
