@@ -1,8 +1,8 @@
 [user]
-	name = huobazi
+	name = Marble Wu 
 	email = huobazi@gmail.com
 [core]
-	editor = /usr/bin/vim
+	editor = vim
 [alias]
     st = status
     ci = commit
