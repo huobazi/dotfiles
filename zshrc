@@ -31,3 +31,10 @@ source $ZSH/oh-my-zsh.sh
 alias tumx='tmux -2'
 
 PATH=/usr/local/bin:$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
+
+#http://mgtuiw.blog.163.com/blog/static/7099195320111015115013243/
+mvim() {   (unset GEM_PATH GEM_HOME; command mvim "$@") } 
+
+# Helpful tmux aliases for interacting with the system clipboard.
+alias tmux-buffer-to-clipboard='tmux save-buffer -|pbcopy'
+alias tmux-buffer-from-clipboard='tmux set-buffer "$(pbpaste)"'
