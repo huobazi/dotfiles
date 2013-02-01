@@ -30,7 +30,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias tumx='tmux -2'
 
-PATH=/usr/local/bin:$PATH:/usr/local/rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/local/bin:$PATH:/usr/local/rvm/bin:/usr/local/sbin # Add RVM to PATH for scripting
 
 #http://mgtuiw.blog.163.com/blog/static/7099195320111015115013243/
 mvim() {   (unset GEM_PATH GEM_HOME; command mvim "$@") } 
