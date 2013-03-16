@@ -1,5 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
+
 ZSH_THEME="fox"
+
 export TERM="xterm-256color"
 
 # Set to this to use case-sensitive completion
