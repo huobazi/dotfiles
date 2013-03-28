@@ -30,8 +30,10 @@ source $ZSH/oh-my-zsh.sh
 # http://episko.posterous.com/brew-zsh-git-and-rvm
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-alias tumx='tmux -2'
+#Use VI mode
+set -o vi 
 
+# Env Path
 export PATH="$PATH:/usr/local/rvm/bin:/usr/local/sbin" # Add RVM to PATH for scripting
 export PATH="/usr/local/bin:$PATH"
 
@@ -39,6 +41,7 @@ export PATH="/usr/local/bin:$PATH"
 #http://mgtuiw.blog.163.com/blog/static/7099195320111015115013243/
 mvim() {   (unset GEM_PATH GEM_HOME; command mvim "$@") } 
 
+alias tumx='tmux -2'
 # Helpful tmux aliases for interacting with the system clipboard.
 alias tmux-buffer-to-clipboard='tmux save-buffer -|pbcopy'
 alias tmux-buffer-from-clipboard='tmux set-buffer "$(pbpaste)"'
