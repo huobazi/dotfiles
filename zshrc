@@ -45,3 +45,8 @@ alias tumx='tmux -2'
 # Helpful tmux aliases for interacting with the system clipboard.
 alias tmux-buffer-to-clipboard='tmux save-buffer -|pbcopy'
 alias tmux-buffer-from-clipboard='tmux set-buffer "$(pbpaste)"'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

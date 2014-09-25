@@ -1,5 +1,5 @@
 [user]
-	name = Marble Wu 
+	name = Marble Wu
 	email = huobazi@gmail.com
 [core]
 	editor = vim
@@ -16,7 +16,7 @@
     status = auto
     branch = auto
     interactive = auto
-    ui = true 
+    ui = true
 
 [color "branch"]
     current = yellow reverse
@@ -40,3 +40,6 @@
 
 [push]
     default = current
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
