@@ -22,7 +22,7 @@ export TERM="xterm-256color"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler gem rails3 ruby rvm rake svn github)
+plugins=(git bundler gem ruby rvm rake svn github)
 
 source $ZSH/oh-my-zsh.sh
 
