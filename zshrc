@@ -50,3 +50,6 @@ alias tmux-buffer-from-clipboard='tmux set-buffer "$(pbpaste)"'
 export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
