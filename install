@@ -2,7 +2,9 @@
 
 current_path="${PWD}"
 
+echo ""
 echo "Installing on-my-zhs"
+
 if [[ -e $HOME/.oh-my-zsh ]]; then
     echo "Oh-my zsh already exists" 
 else
@@ -11,17 +13,30 @@ fi
 
 chsh -s `which zsh`
 
-rm  $HOME/.zshrc
+if [[ -e $HOME/.zshrc ]]; then
+    rm  $HOME/.zshrc
+fi
 ln -s $current_path/zshrc $HOME/.zshrc
 
-rm $HOME/.gemrc
+if [[ -e $HOME/.gemrc ]]; then
+    rm  $HOME/.gemrc
+fi
 ln -s $current_path/gemrc $HOME/.gemrc
 
-rm $HOME/.tmux.conf
+if [[ -e $HOME/.tmux.conf ]]; then
+    rm  $HOME/.tmux.conf
+fi
 ln -s $current_path/tmux.conf $HOME/.tmux.conf
 
-rm $HOME/.gitconfig
+if [[ -e $HOME/.gitconfig ]]; then
+    rm  $HOME/.gitconfig
+fi
 ln -s $current_path/gitconfig $HOME/.gitconfig
 
-rm $HOME/.pryrc
+if [[ -e $HOME/.pryrc ]]; then
+    rm  $HOME/.pryrc
+fi
 ln -s $current_path/pryrc $HOME/.pryrc
+
+
+echo "Oh-my zsh installing done."
