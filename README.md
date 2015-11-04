@@ -4,6 +4,7 @@ It's my dotfiles settings
 
 ## Dependence
 
+* zsh
 * git
 
 ***
