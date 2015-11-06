@@ -39,4 +39,4 @@ fi
 ln -s $current_path/pryrc $HOME/.pryrc
 
 
-echo "Oh-my zsh installing done."
+echo "done."

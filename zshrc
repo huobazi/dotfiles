@@ -22,7 +22,7 @@ export TERM="xterm-256color"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler gem ruby rvm rake svn github)
+plugins=(git bundler gem ruby rvm rbenv rake svn github)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -31,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 #Use VI mode
-set -o vi 
+set -o vi
 
 # Env Path
 export PATH="$PATH:/usr/local/rvm/bin:/usr/local/sbin" # Add RVM to PATH for scripting
@@ -54,6 +54,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
+# rbenv path
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
