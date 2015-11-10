@@ -58,3 +58,9 @@ export LANG=en_US.UTF-8
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# golang settings
+export GOPATH=/$HOME/gopkg
+export GOROOT=/$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
