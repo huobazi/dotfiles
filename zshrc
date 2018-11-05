@@ -27,14 +27,12 @@ plugins=(git bundler gem ruby rvm rbenv rake svn github)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-# http://episko.posterous.com/brew-zsh-git-and-rvm
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
 
 #Use VI mode
 set -o vi
 
 # Env Path
-export PATH="$PATH:/usr/local/rvm/bin:/usr/local/sbin" # Add RVM to PATH for scripting
 export PATH="/usr/local/bin:$PATH"
 
 
@@ -49,15 +47,14 @@ alias tmux-buffer-from-clipboard='tmux set-buffer "$(pbpaste)"'
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
-# rbenv path
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+# source chruby scripts
+
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # golang settings
 export GOPATH=/$HOME/gopkg
