@@ -22,7 +22,7 @@ export TERM="xterm-256color"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler gem ruby rvm rbenv rake svn github)
+plugins=(git bundler gem ruby rake svn github)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,7 +47,7 @@ alias tmux-buffer-from-clipboard='tmux set-buffer "$(pbpaste)"'
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 
@@ -57,6 +57,10 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # golang settings
-export GOPATH=/$HOME/gopkg
-export GOROOT=/$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export GOPATH=/usr/local/Cellar/go/1.11.4
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
+# replace mac system ruby 
+# brew update ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
