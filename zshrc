@@ -64,3 +64,10 @@ export PATH=$PATH:$GOBIN
 # replace mac system ruby 
 # brew update ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+
+# flutter setting
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export PATH="$PATH:`pwd`/projects/flutter/bin"
+
