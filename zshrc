@@ -73,13 +73,13 @@ export PATH="$PATH:`pwd`/projects/flutter/bin"
 
 # proxy setting
 function unproxy(){
-    unset all_proxy
+    unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
     echo -e "\033[0;32m Proxy off ...\033[0m"
     curl cip.cc
 }
 function proxy() {
     export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-    export all_proxy="socks5://127.0.0.1:1080"
+    export http_proxy=socks5://127.0.0.1:1080 https_proxy=$http_proxy HTTP_PROXY=$http_proxy HTTPS_PROXY=$http_proxy all_proxy=$http_proxy ALL_PROXY=$http_proxy
     echo -e "\033[0;32m Proxy on ...\033[0m"
     curl cip.cc
 }
