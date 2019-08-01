@@ -71,3 +71,15 @@ export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 export PATH="$PATH:`pwd`/projects/flutter/bin"
 
+# proxy setting
+function unproxy(){
+    unset all_proxy
+    echo -e "\033[0;32m Proxy off ...\033[0m"
+    curl cip.cc
+}
+function proxy() {
+    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+    export all_proxy="socks5://127.0.0.1:1080"
+    echo -e "\033[0;32m Proxy on ...\033[0m"
+    curl cip.cc
+}
