@@ -54,6 +54,6 @@ fi
 ln -s $current_path/polipo-forbidden $HOME/.polipo-forbidden
 
 brew services start polipo
-echo "see polipo config on http://127.0.0.1:1080/"
+echo "See polipo config on http://127.0.0.1:1090/"
 
 echo "done."
