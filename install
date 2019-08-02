@@ -43,6 +43,17 @@ if [[ -e $HOME/.vuerc ]]; then
 fi
 ln -s $current_path/vuerc $HOME/.vuerc
 
+if [[ -e $HOME/.polipo ]]; then
+    rm  $HOME/.polipo
+fi
+ln -s $current_path/polipo $HOME/.polipo
 
+if [[ -e $HOME/.polipo-forbidden ]]; then
+    rm  $HOME/.polipo-forbidden
+fi
+ln -s $current_path/polipo-forbidden $HOME/.polipo-forbidden
+
+brew services start polipo
+echo "see polipo config on http://127.0.0.1:1080/"
 
 echo "done."
