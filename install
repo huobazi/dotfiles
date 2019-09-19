@@ -56,4 +56,9 @@ ln -s $current_path/polipo-forbidden $HOME/.polipo-forbidden
 brew services start polipo
 echo "See polipo config on http://127.0.0.1:1090/"
 
+if [[ -e $HOME/.gradle/gradle.properties ]]; then
+    rm  $HOME/.gradle/gradle.properties
+fi
+ln -s $current_path/gradle/gradle.properties $HOME/.gradle/gradle.properties
+
 echo "done."
