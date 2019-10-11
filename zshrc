@@ -61,15 +61,14 @@ export GOPATH=/usr/local/Cellar/go/1.11.4
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
-# replace mac system ruby 
+# replace mac system ruby
 # brew update ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-
 
 # flutter setting
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-export PATH="$PATH:/Users/`whoami`/projects/flutter/bin"
+export PATH="$PATH:$HOME/projects/flutter/bin"
 export GRADLE_OPTS='-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1080'
 
 # proxy setting
