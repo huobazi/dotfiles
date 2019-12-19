@@ -29,7 +29,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 
-#Use VI mode
+# Use VI mode
 set -o vi
 
 # Env Path
