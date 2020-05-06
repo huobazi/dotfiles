@@ -66,8 +66,14 @@ export PATH=$PATH:$GOBIN
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # flutter setting
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+#export PUB_HOSTED_URL=https://pub.flutter-io.cn
+#export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
+#export PUB_HOSTED_URL=https://mirrors.tuna.tsinghua.edu.cn/dart-pub
+#export FLUTTER_STORAGE_BASE_URL=https://mirrors.tuna.tsinghua.edu.cn/flutter
+
+export PUB_HOSTED_URL=https://dart-pub.mirrors.sjtug.sjtu.edu.cn/
+export FLUTTER_STORAGE_BASE_URL=https://mirrors.sjtug.sjtu.edu.cn/
 export PATH="$PATH:$HOME/projects/flutter/bin"
 #export GRADLE_OPTS='-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1080'
 
