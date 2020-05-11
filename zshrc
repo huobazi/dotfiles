@@ -66,26 +66,32 @@ export PATH=$PATH:$GOBIN
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # flutter setting
-#export PUB_HOSTED_URL=https://pub.flutter-io.cn
-#export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 #export PUB_HOSTED_URL=https://mirrors.tuna.tsinghua.edu.cn/dart-pub
 #export FLUTTER_STORAGE_BASE_URL=https://mirrors.tuna.tsinghua.edu.cn/flutter
 
-export PUB_HOSTED_URL=https://dart-pub.mirrors.sjtug.sjtu.edu.cn
-export FLUTTER_STORAGE_BASE_URL=https://mirrors.sjtug.sjtu.edu.cn
+#export PUB_HOSTED_URL=https://dart-pub.mirrors.sjtug.sjtu.edu.cn
+#export FLUTTER_STORAGE_BASE_URL=https://mirrors.sjtug.sjtu.edu.cn
 export PATH="$PATH:$HOME/projects/flutter/bin"
-#export GRADLE_OPTS='-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1080'
+#export GRADLE_OPTS='-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1087'
 
 # proxy setting
-function unproxy(){
+function proxyoff(){
     unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY all_proxy ALL_PROXY
     echo -e "\033[0;32m Proxy off ...\033[0m"
     curl cip.cc
 }
-function proxy() {
+function unproxy(){
+    proxyoff
+}
+function proxyon(){
     export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-    export http_proxy="http://127.0.0.1:1090" https_proxy=$http_proxy HTTP_PROXY=$http_proxy HTTPS_PROXY=$http_proxy all_proxy=$http_proxy ALL_PROXY=$http_proxy
+    export http_proxy="http://127.0.0.1:1087" https_proxy=$http_proxy HTTP_PROXY=$http_proxy HTTPS_PROXY=$http_proxy all_proxy=$http_proxy ALL_PROXY=$http_proxy
     echo -e "\033[0;32m Proxy on ...\033[0m"
     curl cip.cc
+}
+function proxy() {
+    proxyon
 }
