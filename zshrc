@@ -52,14 +52,20 @@ export LANG=en_US.UTF-8
 
 
 # source chruby scripts
-
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
-# golang settings
-export GOPATH=/usr/local/Cellar/go/1.11.4
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
+
+# Go development
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+export GO111MODULE=on
+#export GOPROXY=https://goproxy.cn
+export GOPROXY=https://mirrors.aliyun.com/goproxy/
+
 
 # replace mac system ruby
 # brew update ruby
