@@ -101,3 +101,7 @@ function proxyon(){
 function proxy() {
     proxyon
 }
+
+# alias
+alias gpp='git push; git push bitbucket; git push coding'
+

@@ -8,7 +8,7 @@ echo "Installing on-my-zhs"
 if [[ -e $HOME/.oh-my-zsh ]]; then
     echo "Oh-my zsh already exists"
 else
-    git clone https://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh"
+    git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh"
 fi
 
 sudo chsh -s `which zsh`
