@@ -106,4 +106,5 @@ function proxy() {
 alias gpb='git push bitbucket'
 alias gpc='git push coding'
 alias gph='git push github'
+alias gp0='gp; gpb; gpc; gph'
 
