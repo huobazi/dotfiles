@@ -108,3 +108,11 @@ alias gpc='git push coding'
 alias gph='git push github'
 alias gp0='gp; gpb; gpc; gph'
 
+# ruby uninstall
+function ruby-uninstall(){
+    rm -rf $HOME/.rubies/ruby-$1
+    rm -rf $HOME/.gem/ruby/$1
+
+    echo -e $HOME/.rubies/ruby-$1 "was deleted"
+    echo -e $HOME/gem/$1 "was deleted"
+}
