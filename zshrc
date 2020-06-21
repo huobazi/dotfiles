@@ -82,6 +82,8 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 #export FLUTTER_STORAGE_BASE_URL=https://mirrors.sjtug.sjtu.edu.cn
 export PATH="$PATH:$HOME/projects/flutter/bin"
 #export GRADLE_OPTS='-DsocksProxyHost=127.0.0.1 -DsocksProxyPort=1087'
+# postgres
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 
 # proxy setting
 function proxyoff(){
